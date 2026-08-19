@@ -36,6 +36,7 @@ int main (){
 void criar_fila(float fila[]){
     for (int i=0; i<5; i++) {
         fila[i] = 0;
+        cout <<"teste";
     }
 }
 
