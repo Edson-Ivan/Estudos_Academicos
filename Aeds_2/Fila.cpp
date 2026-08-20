@@ -23,7 +23,7 @@ filaE::filaE(){
     qtd = 0;
     ini = 0;
     fim = 0;
-    for(int i=0; i<=0; i++){
+    for(int i=0; i<=5; i++){
         fila[i] = 0;
     }
 }
