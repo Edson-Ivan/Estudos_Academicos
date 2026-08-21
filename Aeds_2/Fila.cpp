@@ -32,19 +32,13 @@ void filaE::entrarFila(int valorEntrada){
     if(qtd < 5){
         if(fim < 5){
             fila[fim] = valorEntrada;
-            cout << "O fim esta em" << fim << endl;
-            cout << "O Ini esta em" << ini << endl;
-            cout << "Antes de add "<< qtd << endl;
         }else{
                 fim = 0;
                 fila[fim] = valorEntrada;
-                cout << "O fim esta em" << fim << endl;
-                cout << "O Ini esta em" << ini << endl;
-                cout << "Antes de add "<< qtd << endl;
             }
             qtd++;
             fim++;
-            cout << "depois de add "<< qtd << endl;
+           // cout << "depois de add "<< qtd << endl;
         
     }else{
         cout << "Fila cheia" << endl;
@@ -56,46 +50,51 @@ void filaE::sairFila(){
         if(ini < 5){
             fila[ini] = -1;
             cout << "O Ini esta em" << ini << endl;
-            cout << "Antes de sub "<< qtd << endl;
+           // cout << "Antes de sub "<< qtd << endl;
 
         }else{
             ini = 0;
             fila[ini] = -1;
             cout << "O Ini esta em" << ini << endl;
-            cout << "Antes de sub "<< qtd << endl;
+           // cout << "Antes de sub "<< qtd << endl;
         }
 
         ini++;
         qtd--;
-        cout << "depois de sub "<< qtd << endl;
+        //cout << "depois de sub "<< qtd << endl;
     }else{
         cout << "Fila vazia" << endl;
     }
 }
 
 void filaE::imprimir(){
-    if(qtd > 0){
-        if(ini > fim){
-            cout <<"Sai cachorro";
+    
+    if(qtd > 0 && qtd <= 5){
+        if(ini > fim-1){
+            //cout <<"Passou aqui em" << endl;
             int i = ini;
-            while (i != --fim)
+
+            while (i != fim-1)
             {
+                
                 if(i < 5){
-                    cout << fila[i] << endl;
+                    cout << "|"<< fila[i] << "|" << endl;
                     i++;
-                    cout << "IMPRI 2" << endl;
+                    
                 }else{
-                    i=0;
-                    cout << fila[i] << endl;
-                    cout << "IMPRI 3" << endl;
+                    for(i = 0; i<fim; i++){
+                        cout << "|"<< fila[i] << "|" << endl;
+                    }
+                    i--;
+
                 }
             }
             
         }else{
             for(int i=ini; i < fim; i++){
-                cout <<"|"<< fila[i] << "|" << endl;
+                cout << "|"<< fila[i] << "|" << endl;
             }
-            cout << "IMPRI 1" << endl;
+           // cout << "IMPRI 1" << endl;
             
         }
         
@@ -111,7 +110,7 @@ int main (void){
     filaE filaEstatica; //verificar ****
     int opcaoMenu = 0;
     int valorEntrada=0;
-
+    
     
     do{
         cout << "1 - Inserir na fila " << endl << "2 - Remover da fila" << endl << "3 - Imprimir" << endl << "4 - Sair" << endl << "Selecione a opcao desejada :";

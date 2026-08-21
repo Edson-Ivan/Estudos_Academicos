@@ -49,7 +49,7 @@ void listaE::inserirLista(int valor){
          }
         qtd++;
     }else{
-        cout << "Lista cheia" << endl;
+        cout << "***** Lista cheia *****" << endl;
     }
 }
 void listaE::removerLista(int valor){
@@ -63,10 +63,10 @@ void listaE::removerLista(int valor){
             qtd--;
 
         }else {
-            cout << "O valor nao esta na lista " << endl;
+            cout << "***** O valor nao esta na lista *****" << endl;
         }
     }else{
-        cout << "Lista vazia" << endl;
+        cout << "***** Lista vazia *****" << endl;
     }
 }
 void listaE::imprimir(){
@@ -76,7 +76,7 @@ void listaE::imprimir(){
         }
         cout << endl;
     }else{
-        cout << "Lista vazia" << endl;
+        cout << "***** Lista vazia *****" << endl;
     }
 
 }
@@ -106,5 +106,6 @@ int main(){
             listaEstatica.imprimir();
         }
     }while(opcao != 4);
+    
     return 0;
 }
