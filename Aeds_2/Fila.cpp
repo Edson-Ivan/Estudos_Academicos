@@ -11,7 +11,7 @@ class filaE{
         int ini;
         int fim;
         filaE(); 
-      //  ~filaE();
+        ~filaE();
         void entrarFila(int valorEntrada);
         void sairFila();
         void imprimir();
@@ -25,6 +25,12 @@ filaE::filaE(){
     fim = 0;
     for(int i=0; i<=5; i++){
         fila[i] = 0;
+    }
+}
+
+filaE::~filaE(){
+    while(qtd>0){
+        sairFila();
     }
 }
 

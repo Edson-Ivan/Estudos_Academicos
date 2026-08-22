@@ -13,7 +13,7 @@ class listaE{
         int valor;
         int fim;
         listaE();
-        //~listaE();
+        ~listaE();
         void inserirLista(int valor);
         void removerLista(int valor);
         void imprimir();
@@ -27,6 +27,12 @@ listaE::listaE(){
 
     for (int i = 0; i < 5; i++){
         dados[i] = 0;
+    }
+}
+
+listaE::~listaE(){
+    while(qtd > 0){
+        removerLista(dados[fim]);
     }
 }
 
