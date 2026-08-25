@@ -50,8 +50,8 @@ void listaD::inserirLista(int valor){
 
     if(qtd == 0)
     {
-        ini = novo;
-        fim = novo;
+        ini->ant = novo;
+        fim->ant = novo;
         novo->prox = novo;
     
     }else if(qtd > 0);
