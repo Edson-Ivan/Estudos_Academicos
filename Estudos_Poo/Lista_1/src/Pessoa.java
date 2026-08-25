@@ -21,7 +21,7 @@ public class Pessoa{
         //FOR EACH criar um objeto temporario e vai andando ate encontrar null
         for(Contato temp:contatos){
             if(temp != null){
-                impressao += temp.retornaDaos() + "\n";
+                impressao += temp.retornaDados() + "\n";
             }
             // OU COM FOR
             /*
@@ -30,9 +30,8 @@ public class Pessoa{
                 impressao += contatos[i].retornaDados()+ "\n";
              }
              */
-            System.out.println(impressao);
-
         }
+        System.out.println(impressao);
 
     }
 };

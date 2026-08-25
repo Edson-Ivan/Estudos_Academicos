@@ -7,7 +7,7 @@ public class Contato {
         this.informacao = informacao;
     }
 
-    public String retornaDaos(){
+    public String retornaDados(){
         return tipoContato + ": " + informacao;
     }
 }
