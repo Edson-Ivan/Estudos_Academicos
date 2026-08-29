@@ -35,18 +35,19 @@ public class Main {
             }case 2->{
                 System.out.println("Digite o nome do contato: ");
                 String pContatos = input.next();
-                Pessoa p = new Pessoa();
                 int i=0;
-                for(i=0; i<agendaContatos.caderneta.size()|| !pContatos.equals(agendaContatos.caderneta) ; i++){
-                    if(pContatos.equals(agendaContatos.caderneta)){
-                        p.imprimirPessoa();
-                    }else if(i==agendaContatos.caderneta.size()){
-                        System.out.println("Não encontrado");
-                        p.imprimirPessoa();
+                for(i=0; i<agendaContatos.caderneta.size(); i++){
+                    if(pContatos.equals(agendaContatos.caderneta.get(i).nome)){
+                        //Pessoa plocal = agendaContatos.caderneta.get(i);
+                        //plocal.imprimirPessoa();
+                        agendaContatos.caderneta.get(i).imprimirPessoa();
+                        break;
                     }
                 }
+                if(i==agendaContatos.caderneta.size()){
+                    System.out.println("Não encontrado");
+                }
 
-             //   p.imprimirPessoa();
 
             }case 3->{
                 agendaContatos.imprimir();
