@@ -23,15 +23,14 @@ public class Dicionario {
     public void imprimirDicionario(){
 
         if(quantPalavras >0){
-            String sign = "";
-            for(int i =0;palavras[i] != null && i < quantPalavras; i++){
+
+            for(int i =0; i < quantPalavras && palavras[i] != null; i++){
+                String sign = "";
                 System.out.println("Palavra: "+ palavras[i].termo +"\nSignificado: ");
-                for(int j=0; palavras[i].significado[j] != null && j<palavras[i].quantSignifcado; j++){
+                for(int j=0; j<palavras[i].quantSignifcado  && palavras[i].significado[j] != null; j++){
                     sign += palavras[i].significado[j] + ", ";
-                    System.out.println("teste 01");
                 }
                 System.out.println(sign);
-                System.out.println("teste2");
             }
         }
     }

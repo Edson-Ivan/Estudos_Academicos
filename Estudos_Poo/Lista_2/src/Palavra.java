@@ -11,7 +11,7 @@ public class Palavra {
     public void incluiSignificado(String significado){
         int i=0;
         for(i=0; i<quantSignifcado; i++){
-                if(this.significado[i] != null){ // isBlanck confirma se tem algum dados escritp na posição inemply valida se
+                if(this.significado[i] == null){ // isBlanck confirma se tem algum dados escritp na posição inemply valida se
                     this.significado[i] = significado;
                     break;
                 }

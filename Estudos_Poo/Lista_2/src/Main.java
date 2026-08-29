@@ -32,7 +32,7 @@ public class Main {
                     do{
                         System.out.println("informe o significado :");
                         String significado = entrada.next();
-                        System.out.println("Teste 1");
+                        System.out.println(significado);
                         palavra.incluiSignificado(significado);
                         System.out.println("Deseja incluir mais significaods : 1-SIM 2-NAO");
                         opcao2 = entrada.nextInt();
