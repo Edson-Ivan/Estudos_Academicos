@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Dicionario {
     public Palavra[] palavras;
     public int quantPalavras;
@@ -26,11 +28,13 @@ public class Dicionario {
 
             for(int i =0; i < quantPalavras && palavras[i] != null; i++){
                 String sign = "";
-                System.out.println("Palavra: "+ palavras[i].termo +"\nSignificado: ");
+                //System.out.println("Palavra: "+ palavras[i].termo +"\nSignificado: ");
                 for(int j=0; j<palavras[i].quantSignifcado  && palavras[i].significado[j] != null; j++){
                     sign += palavras[i].significado[j] + ", ";
                 }
-                System.out.println(sign);
+                JOptionPane.showMessageDialog(null, "Palavra: "+ palavras[i].termo +"\nSignificado: "+ sign, "Dicionario", JOptionPane.INFORMATION_MESSAGE);
+                //System.out.println(sign);
+
             }
         }
     }
