@@ -9,4 +9,15 @@ public class Pedido {
         itens = new ItemPedido[10];
     }
 
+    public void inserirItem(ItemPedido item){
+
+        for(int i = 0; i< itens.length; i++){
+            if(itens[i] == null){
+                itens[i] = item;
+                break;
+            }
+
+        }
+    }
+
 }
