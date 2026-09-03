@@ -66,3 +66,65 @@ void removerValor(float pilha[], int &top){
         cout << " ******* Pilha vazia ******* \n";
     }
 }
+
+
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+class PilhaE{
+    private:
+        int topo;
+        int pilha[5];
+        int valor;
+
+    public:
+        PilhaE(); // \Nao possui metodo de retorno
+        ~PilhaE();
+        void imprimir();
+        void addPilha(int valor);
+        void removePilha();
+
+
+};
+
+PilhaE::PilhaE()
+{
+    topo = 0;
+    valor = 0;
+
+    for(int i =0; i<5; i++)
+    {
+        pilha[i] = 0;
+    }
+
+        
+}
+
+PilhaE::~PilhaE(){
+    while (topo>0)
+    {
+        removePilha();
+    }
+    
+}
+
+void PilhaE::addPilha(int valor){
+    if(topo<5){
+       pilha[topo] = valor;
+       topo++;
+    }else{
+        cout >> "Pilha cheia";
+    }
+}
+
+
+
+void PilhaE::removePilha(){
+    if(topo>0){
+        pilha[topo-1] = 0;
+        topo--;
+    }else{
+        cout >> "Pilha vazia";
+    }
+}
